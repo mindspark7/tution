@@ -18,6 +18,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 .service {
@@ -138,23 +139,21 @@ button[type="submit"] {
 @media screen {
     .container {
         max-width: 800px;
-        max-height: 1130px;
         margin: 20px auto;
         padding: 0 20px;
         text-align: center;
+        align-items: center;
     }
     .services-container {
         display: flex;
         justify-content: space-between;
         max-width: 640px;
-        max-height: 1130px;
         margin: 0 auto;
         padding: 20px;
     }
 
     .web-designer{
         max-width: 800px;
-        max-height: 1130px;
         margin: 0 auto;
         padding: 20px;
         text-align: center;
@@ -179,9 +178,19 @@ button[type="submit"] {
         padding: 20px;
         text-align: center;
     }
-    
+
     .reach-us-container {
         max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .services-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
         text-align: center;
@@ -194,6 +203,13 @@ button[type="submit"] {
     p {
         text-align: center;
         margin-bottom: 50px;
+        
+        align-items: center;
+    }
+    h2 {
+        text-align: center;
+        margin: 50px;
+        align-items: center;
     }
 }
 
