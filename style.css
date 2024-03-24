@@ -135,6 +135,67 @@ button[type="submit"] {
     background-color: #0056b3;
 }
 
+@media screen {
+    .container {
+        max-width: 800px;
+        max-height: 1130px;
+        margin: 20px auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .services-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 640px;
+        max-height: 1130px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .web-designer{
+        max-width: 800px;
+        max-height: 1130px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .cta-button {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 15px 30px;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .web-designer{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .reach-us-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
 
 
 
