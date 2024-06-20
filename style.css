@@ -59,6 +59,12 @@ header p {
     margin-bottom: 20px;
 }
 
+.container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* Services Section Styles */
 #services {
     background-color: #fff;
@@ -91,6 +97,7 @@ header p {
 .service img {
     width: 100%;
     max-width: 150px;
+    height: auto;
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -201,11 +208,21 @@ button[type="submit"]:hover {
         max-width: 1000px;
         padding: 15px;
     }
+
+    .container img, .service img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 992px) {
     .container, #reach-us-container, #contact, #web-designer, #services {
         max-width: 800px;
+    }
+
+    .container img, .service img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -216,6 +233,11 @@ button[type="submit"]:hover {
 
     .service {
         flex: 1 1 45%; /* Two services per row */
+    }
+
+    .container img, .service img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -234,6 +256,11 @@ button[type="submit"]:hover {
 
     #services {
         padding: 30px 10px;
+    }
+
+    .container img, .service img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
