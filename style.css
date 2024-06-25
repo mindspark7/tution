@@ -94,7 +94,7 @@ header p, header h3 {
     margin-bottom: 20px;
     border-radius: 5%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 }
 
 #about-us .container img:hover {
@@ -191,6 +191,17 @@ header p, header h3 {
     margin-bottom: 20px;
 }
 
+#reach-us .container iframe {
+    width: 100%;
+    height: 500px;  
+    padding-bottom: 5px; 
+    border: 1px ;
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  
+
 .map-button {
     display: inline-block;
     padding: 12px 24px;
@@ -226,6 +237,36 @@ header p, header h3 {
     font-size: 1.1em;
     margin-bottom: 20px;
 }
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #007BFF;
+}
+
+.contact-info .whatsapp :hover {
+    color: #31e664;
+}
+
+.contact-info .email :hover {
+    color: #ff1500;
+}
+
+.contact-info p {
+    margin: 10px 0 5px;
+    color: #555;
+}
+
 
 /* Web Designer Section Styles */
 #web-designer {
