@@ -18,7 +18,8 @@ const teamDetails = [
 		position: 'The Board',
 		role: 'CEO',
 		description: 'PhD (Plug-in Hybrid Electric Vehicle) at National Institute of Technology Agartala',
-		image: 'default_member.png',
+		experience: '9+ years',
+		image: 'SagarMallik.jpeg',
 		profiles: [
 			{
 				linkedIn: 'https://www.linkedin.com/in/er-sagar-mallik-564564213/'
@@ -29,7 +30,8 @@ const teamDetails = [
 		name: 'Anirban Sutradhar',
 		position: 'Technical Team',
 		role: 'Tech Lead @MinDSparK',
-		image: 'default_member.png',
+		experience: '2.5 years',
+		image: 'AnirbanSutradhar.jpeg',
 		profiles: [
 			{
 				github: 'https://github.com/sutradharanirban'
@@ -48,24 +50,14 @@ const teamDetails = [
 			}
 		]
 	},
-	{
-		name: 'Anirban Sutradhar',
-		position: 'Technical Team',
-		image: 'default_member.png',
-		profiles: [
-			{
-				linkedIn: '#',
-				github: '#',
-				
-			}
-		]
-	},
+	
 	{
 		name: 'Er. Sagar Mallik',
 		position: 'Faculties Team',
-		role: 'Electrical Engineering',
+		role: 'Electrical Engineering (B.Tech and M.Tech)',
 		description: 'PhD (Plug-in Hybrid Electric Vehicle) at NIT Agartala',
-		image: 'default_member.png',
+		experience: '9+ years',
+		image: 'SagarMallik.jpeg',
 		profiles: [
 			{
 				linkedIn: 'https://www.linkedin.com/in/er-sagar-mallik-564564213/'
@@ -77,7 +69,8 @@ const teamDetails = [
 		position: 'Faculties Team',
 		role: 'Mathematics',
 		description: 'B.Tech 2nd Year',
-		image: 'default_member.png',
+		experience: '1 year',
+		image: 'PriyasBanik.jpeg',
 		profiles: [
 			{
 				linkedIn: '#'
@@ -89,7 +82,8 @@ const teamDetails = [
 		position: 'Faculties Team',
 		role: 'Chemistry',
 		description: 'BSc & MSc (Chemistry)',
-		image: 'default_member.png',
+		experience: '4+ years',
+		image: 'AmitDatta.jpeg',
 		profiles: [
 			{
 				linkedIn: '#'
@@ -97,11 +91,12 @@ const teamDetails = [
 		]
 	},
 	{
-		name: 'Punam Das',
+		name: 'Er. Punam Das',
 		position: 'Faculties Team',
 		role: 'Electrical Engineering (B.tech and M.Tech)',
 		description: 'Ph.D Scholar at NIT Agartala',
-		image: 'default_member.png',
+		experience: '7 years',
+		image: 'PunamDas.jpeg',
 		profiles: [
 			{
 				linkedIn: 'https://www.linkedin.com/in/punam-das-06bb58354/'
@@ -109,14 +104,41 @@ const teamDetails = [
 		]
 	},
 	{
-		name: 'Pritam Banik',
+		name: 'Er. Pritam Banik',
 		position: 'Faculties Team',
 		role: 'Computer Network, Software Engineer, Internet of Things',
 		description: 'B.Tech in Computer Science',
-		image: 'default_member.png',
+		experience: '2.5 years',
+		image: 'PritamBanik.jpeg',
 		profiles: [
 			{
 				linkedIn: '#'
+			}
+		]
+	},
+	{
+		name: 'Er. Diya Banik',
+		position: 'Faculties Team',
+		role: 'DBMS, DSA',
+		description: 'B.Tech in CSE',
+		experience: '1 year',
+		image: 'DiyaBanik.jpeg',
+		profiles: [
+			{
+				linkedIn: 'https://www.linkedin.com/in/diya-banik-4125022aa'
+			}
+		]
+	},
+	{
+		name: 'Er. Sarbari Nath',
+		position: 'Faculties Team',
+		role: 'Digital Electronics, Analog Electronics',
+		description: 'M.Tech in ECE (Micro Electronics & VLSI Design)',
+		experience: '4 years',
+		image: 'SarbariNath.jpeg',
+		profiles: [
+			{
+				linkedIn: 'https://www.linkedin.com/in/sarbari-nath'
 			}
 		]
 	}
@@ -168,16 +190,17 @@ const mapPositionToHtmlId = position => {
 
 // Generates HTML for each team members from array
 const generateCards = cardDetail => {
-	const { name, position, image, profiles, role, description } = cardDetail;
+	const { name, position, image, profiles, role, description, experience } = cardDetail;
 
 	const getProfilesLinksDynamic = generateProfileLinks(profiles[0]);
 	const tagsHtml = generateTagPills(profiles[0]);
+	const descHtml = [description, experience ? `<span class="team-card-exp">&#9201; ${experience} experience</span>` : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
 
 	const teamCard = `
   <card data-image="./assets/Images/team/${image}">
 		<span slot="header">${name}</span>
 		<span slot="role">${role || position}</span>
-		<span slot="description">${description || ''}</span>
+		<span slot="description">${descHtml}</span>
 		<span slot="tags">${tagsHtml}</span>
 		<span slot="content">${getProfilesLinksDynamic}</span>
   </card>`;
