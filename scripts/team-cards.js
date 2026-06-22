@@ -30,7 +30,7 @@ const teamDetails = [
 		name: 'Anirban Sutradhar',
 		position: 'Technical Team',
 		role: 'Tech Lead @MinDSparK',
-		experience: '2.5+ years',
+		experience: '3.5+ years',
 		image: 'AnirbanSutradhar.jpeg',
 		profiles: [
 			{
